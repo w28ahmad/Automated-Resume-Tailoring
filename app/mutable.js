@@ -4,10 +4,12 @@ var obj = JSON.parse(fs.readFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automa
 
 projects = () =>{
     var projects = obj.mutable.projects;
-    console.log("please select one...");
+    // console.log("please select one...");
+    var list = []
     for(var i = 0; i < projects.length; i++){
-        console.log(i+" "+projects[i].title);
+        list.push(projects[i].title);
     }
+    return list
 }
 
 addProjects = (projects, dom) =>{
