@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    font-family: 'News Cycle', sans-serif;
+/*    font-family: 'Jaldi', sans-serif;*/
+}
+
+.first_page {
+    left: 50%;
+    transform: translate(0%, 0);
+    top: 0px;
+    width: 695px;
+    height: 100%;
+}
+
+div.cls_002 {
+/*    font-family: Times, serif;*/
+    font-size: 35px;
+    color: rgb(93, 93, 93);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    
+}
+
+span.cls_003 {
+/*    font-family: Times, serif;*/
+    font-size: 35px;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+div.cls_004 {
+/*    font-family: Times, serif;*/
+    font-size: 12px;
+    color: rgb(220, 53, 33);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+span.cls_005 {
+/*    font-family: Times, serif;*/
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none
+}
+
+
+div.cls_006 {
+/*    font-family: Arial, serif;*/
+    font-size: 6.8px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+span.cls_007 {
+/*    font-family: Times, serif;*/
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+
+span.cls_008 {
+/*    font-family: Times, serif;*/
+    font-size: 9.0px;
+    color: rgb(65, 65, 65);
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none
+}
+
+span.heading {
+    display: block;
+/*    font-family: Times, serif;*/
+    font-size: 24px;
+    color: rgb(220, 53, 33);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    padding-top: 2px;
+}
+
+
+span.cls_010 {
+/*    font-family: Times, serif;*/
+    font-size: 16.0px;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none
+}
+
+span.text {
+/*    font-family: Times, serif;*/
+    display: block;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 14px;
+}
+
+
+span.subtitle {
+    display: block;
+/*    font-family: Times, serif;*/
+    font-size: 14.0px;
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+/*    padding-bottom: 5px;*/
+    margin: 2px 0;
+    
+}
+
+span.cls_013 {
+/*    font-family: Times, serif;*/
+    font-size: 9.0px;
+    color: rgb(220, 53, 33);
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none
+}
+
+
+
+span.cls_014 {
+/*    font-family: Times, serif;*/
+    font-size: 10px;
+    color: rgb(93, 93, 93);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+
+span.cls_015 {
+/*    font-family: Times, serif;*/
+    font-size: 12px;
+    color: rgb(93, 93, 93);
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none
+}
+
+
+
+span.cls_016 {
+/*    font-family: Times, serif;*/
+    font-size: 12.0px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+
+span.cls_017 {
+/*    font-family: Times, serif;*/
+    font-size: 9.0px;
+    color: rgb(93, 93, 93);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+
+span.cls_018 {
+/*    font-family: Times, serif;*/
+    font-size: 9.0px;
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+span.cls_019 {
+/*    font-family: Times, serif;*/
+    font-size: 11.0px;
+    color: rgb(93, 93, 93);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+span.cls_020 {
+/*    font-family: Times, serif;*/
+    font-size: 8.0px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none
+}
+
+
+.name {
+    position: absolute;
+    left: 203.51px;
+    top: 14.19px;
+}
+
+.title {
+    position: absolute;
+    left: 236.52px;
+    top: 52.49px;
+}
+
+.test {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.infoBlock {
+    display: inline-flex;
+}
+
+.summary {
+    margin: 2% 5%;
+}
+
+.title-date {
+display:flow-root;
+}
+
+.date {
+    float: right;    
+}
+
+.title-section {
+    float: left;
+}

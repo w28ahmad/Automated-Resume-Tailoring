@@ -1,0 +1,14 @@
+HOW TO USE IT
+
+List the options by:
+node editResume.js --help
+
+List All the projects by:
+node editResume.js projects
+
+Add constants by:
+node editResume.js const
+
+Add specific Resumes:
+node editResume.js --addp 1 2 3
+Here projects 1 2 and 3 are added to the webpage.
