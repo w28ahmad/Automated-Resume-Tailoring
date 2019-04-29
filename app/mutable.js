@@ -1,6 +1,6 @@
 const fs  = require("fs");
 
-var obj = JSON.parse(fs.readFileSync("./UserInfo/Information.json"));
+var obj = JSON.parse(fs.readFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/UserInfo/Information.json"));
 
 projects = () =>{
     var projects = obj.mutable.projects;
@@ -32,7 +32,7 @@ addProjects = (projects, dom) =>{
     output = output.replace(/&lt;/g, '<');
     output = output.replace(/&gt;/g, '>');
 
-    fs.writeFileSync("C:\\Users\\Wahab Ahmad\\Documents\\CV's\\Automated Resume Taloring\\Resume Templates\\Resume1.html", output);
+    fs.writeFileSync("C:\\Users\\Wahab Ahmad\\Documents\\CV's\\Automated Resume Taloring\\public\\Resume Templates\\Resume1.html", output);
 }
 
 module.exports = {

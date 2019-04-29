@@ -24,6 +24,11 @@ app.get('', (req, res)=>{
     })
 })
 
+app.get('/Resume1', (req, res)=>{
+    // console.log(__dirname+"/../Resume Templates/Resume1.html")
+    res.render("Resume1")
+})
+
 app.listen(port, ()=>{
     console.log('Server is up on port '+port);
 })

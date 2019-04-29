@@ -1,5 +1,5 @@
-const constants = require("./constant.js");
-const mutable = require("./mutable.js");
+const constants = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/constant.js");
+const mutable = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/mutable.js");
 
 const jsdom = require("jsdom");
 const fs  = require("fs");
@@ -18,7 +18,7 @@ var argv = yargs
 var command = argv._[0];
 
 const { JSDOM } = jsdom;
-var htmlFile = fs.readFileSync("C:\\Users\\Wahab Ahmad\\Documents\\CV's\\Automated Resume Taloring\\Resume Templates\\Resume1.html", "UTF8");
+var htmlFile = fs.readFileSync("C:\\Users\\Wahab Ahmad\\Documents\\CV's\\Automated Resume Taloring\\public\\Resume Templates\\Resume1.html", "UTF8");
 const dom = new JSDOM(htmlFile);
 
 
