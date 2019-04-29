@@ -11,18 +11,20 @@
 <body>
     <div class="main-content page">
         <h1>{{title}}</h1>
-        <p>Quickly talor your resumes</p>
+        <h3>Quickly talor your resumes</h3>
         <div>
             <button class="btn" onclick="openResume()">Show Resume</button>
         </div>
-        {{!--  --}}
+        <div style="margin-top:25px;" id="Project_div">
+
+        </div>
 
         <div class="secondary-content">
             <form id="form">
                 <div class="form-group">
                     <input name="command" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Command">
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="analyze()">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
@@ -32,4 +34,13 @@
     <script src="/js/app.js"></script>
 </body>
 </html>
+
+            {{!-- <h5 style="padding-bottom:2px;">Project 1</h5>
+            <hr>
+            <h5 style="padding-bottom:2px;">Project 1</h5>
+            <hr>
+            <h5 style="padding-bottom:2px;">Project 1</h5>
+            <hr>
+            <h5 style="padding-bottom:2px;">Project 1</h5>
+            <hr> --}}
 
