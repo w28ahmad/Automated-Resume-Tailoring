@@ -34,7 +34,7 @@ addProjects = (projects, dom) =>{
     output = output.replace(/&lt;/g, '<');
     output = output.replace(/&gt;/g, '>');
 
-    fs.writeFileSync("C:\\Users\\Wahab Ahmad\\Documents\\CV's\\Automated Resume Taloring\\public\\Resume Templates\\Resume1.html", output);
+    fs.writeFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/templates/views/Resume1.hbs", output);
 }
 
 module.exports = {

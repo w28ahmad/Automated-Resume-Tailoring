@@ -1,6 +1,8 @@
-const hbs = require('hbs');
+// const hbs = require('hbs');
 const path = require('path');
 const express = require('express');
+const jsdom = require('jsdom');
+const fs = require('fs');
 
 // Import Data
 const constants = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/constant.js");
@@ -19,6 +21,10 @@ const viewspath = path.join(__dirname, '../templates/views')
 app.set('view engine', 'hbs');
 app.set('views', viewspath);
 
+// Configering jsdom
+const { JSDOM } = jsdom;
+var htmlFile = fs.readFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/templates/views/Resume1.hbs", "UTF8");
+const dom = new JSDOM(htmlFile);
 
 // setting up static site
 app.use(express.static(publicDirectoryPath))
@@ -39,6 +45,18 @@ app.get('/projects', (req, res)=>{
     // console.log(p)
     res.send({
         projects: p
+    })
+})
+
+app.get('/addProjects', (req, res)=>{
+    str = req.query.data
+    arr = str.split(",").map(function(item) {
+        return parseInt(item, 10);
+    });
+    console.log(arr)
+    addProjects(arr, dom)
+    res.send({
+        data: "*Completed"
     })
 })
 

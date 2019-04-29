@@ -17,7 +17,9 @@ submit.addEventListener('submit', (e)=>{
     }else if(command == "clear"){
         clear();
     }else if(command.includes("add project")){
-        console.log("true")
+        result = command.match(/\d+/g);
+        addProjects(result);
+        // console.log(result);
     }
     else{
         console.log("I am not sure what you mean. Please type 'help' to show all options")
@@ -36,8 +38,6 @@ showProjects = (data) =>{
         projectDiv.appendChild(document.createElement('hr'))
     }
 
-
-
 }
 
 function setAttributes(el, attrs) {
@@ -52,3 +52,29 @@ clear = () =>{
         myNode.removeChild(myNode.firstChild);
     }
 }
+
+addProjects = (result)=>{
+
+    // console.log(result);
+    fetch('/addProjects?data='+result).then((response)=>{
+        response.json().then((data)=>{
+            completed(data.data)
+        })
+    })
+
+}
+
+completed = (data) =>{
+    if(data == "*Completed"){
+        var completedDiv = document.getElementById("Resume_div")
+        var com = document.createElement('h5')
+        setAttributes(com, {"style":"display:inline-block;margin-left:25px;color:green;"})
+        com.textContent = data
+
+        completedDiv.appendChild(com)
+    }else{
+        console.log("Something Broke")
+    }
+
+}
+
