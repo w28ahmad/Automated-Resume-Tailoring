@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
     "jsdom": "^13.2.0",
     "lodash": "^4.17.11",
+    "path": "^0.12.7",
     "yargs": "^13.2.0"
   }
 }
