@@ -26,6 +26,8 @@ submit.addEventListener('submit', (e)=>{
     }else if(command == "clear"){
         clear("Project_div");
     }else if(command.includes("add project")){
+        var iframe = document.getElementById('preview');
+        iframe.src = iframe.src;
         result = command.match(/\d+/g);
         addProjects(result);
         // console.log(result);
