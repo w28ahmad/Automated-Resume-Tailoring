@@ -12,3 +12,17 @@ node editResume.js const
 Add specific Resumes:
 node editResume.js --addp 1 2 3
 Here projects 1 2 and 3 are added to the webpage.
+
+_______________V2
+
+My projects
+Add projects 0 1 2 3 4
+clear
+show resume
+
+
+
+TODO
+create a way to update the json file
+make sure nothing can be deleted
+Summary and technical_skills should be mutable

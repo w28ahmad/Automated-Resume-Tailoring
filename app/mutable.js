@@ -4,7 +4,6 @@ var obj = JSON.parse(fs.readFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automa
 
 projects = () =>{
     var projects = obj.mutable.projects;
-    // console.log("please select one...");
     var list = []
     for(var i = 0; i < projects.length; i++){
         list.push(projects[i].title);
@@ -37,7 +36,24 @@ addProjects = (projects, dom) =>{
     fs.writeFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/templates/views/Resume1.hbs", output);
 }
 
+showSummary = () =>{
+    var summary = obj.mutable.summary;
+    list = []
+    for(var i = 0; i < summary.length; i++){
+        list.push(summary[i])
+    }
+    return list
+}
+
+addToSummary = (data) =>{
+    var summary = obj.mutable.summary
+    summary.push("• "+data);
+    fs.writeFileSync(__dirname+"/UserInfo/Information.json", JSON.stringify(obj))
+}
+
 module.exports = {
     projects,
-    addProjects
+    addProjects, 
+    showSummary,
+    addToSummary
 }

@@ -5,29 +5,63 @@ openResume = () =>{
 const submit = document.getElementById("form")
 submit.addEventListener('submit', (e)=>{
     e.preventDefault()
+    try{
+        var summaryInput = form.elements.summary.value.toLowerCase()
+    }catch(err){}
     var command = form.elements.command.value.toLowerCase();
     clearUpdate();
-    if(command == "show resume"){
+
+    if(summaryInput && summaryInput!=""){
+        // Clear that area
+        clear('form-div-add')
+        addSummary(summaryInput)
+    }else if(command == "show resume"){
         openResume();
-    }else if(command == "my projects"){
+    }else if(command == "show projects"){
         fetch('/projects').then((result)=>{
             result.json().then((data)=>{
-                showProjects(data.projects);
+                show(data.projects);
             })            
         })
     }else if(command == "clear"){
-        clear();
+        clear("Project_div");
     }else if(command.includes("add project")){
         result = command.match(/\d+/g);
         addProjects(result);
         // console.log(result);
+    }else if(command == "show summary"){
+        fetch('/Summary').then((result)=>{
+            result.json().then((data)=>{
+                show(data.summary);
+            })
+        })
+    }else if(command == "add summary"){
+        addInput("summary")
     }
     else{
-        console.log("I am not sure what you mean. Please type 'help' to show all options")
+        update("That is not a command, look at the commands bar for help")
     }
 })
 
-showProjects = (data) =>{
+addInput = (type) =>{
+    // At the start of this function it should clear();
+    if(type == "summary"){
+        var addDiv = document.getElementById("form-div-add");
+        var textbox = document.createElement('input')
+        setAttributes(textbox, {'name':'summary', 'type':'text', 'class':'form-control', 'placeholder':'Add Summary'})
+        addDiv.appendChild(textbox);
+    }
+}
+
+addSummary = (summaryInput) => {
+    fetch("/addSummary?input="+summaryInput).then((response)=>{
+        response.json().then((data)=>{
+            update(data.data)
+        })
+    })
+}
+
+show = (data) =>{
     projectDiv = document.getElementById("Project_div");
 
     for(var i = 0; i < data.length; i++){
@@ -47,17 +81,15 @@ function setAttributes(el, attrs) {
     }
   }
 
-clear = () =>{
+clear = (Id) =>{
     clearUpdate()
-    var myNode = document.getElementById("Project_div");
+    var myNode = document.getElementById(Id);
     while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
     }
 }
 
 addProjects = (result)=>{
-
-    // console.log(result);
     fetch('/addProjects?data='+result).then((response)=>{
         response.json().then((data)=>{
             update(data.data)
@@ -67,7 +99,7 @@ addProjects = (result)=>{
 }
 
 update = (data) =>{
-    if(data == "*Completed"){
+    if(data == "*Completed" || data == "*Added"){
         var completedDiv = document.getElementById("Resume_div")
         var com = document.createElement('h5')
         setAttributes(com, {"style":"display:inline-block;margin-left:25px;color:green;", "id":"update"})
@@ -75,7 +107,12 @@ update = (data) =>{
 
         completedDiv.appendChild(com)
     }else{
-        console.log("Something Broke")
+        var completedDiv = document.getElementById("Resume_div")
+        var com = document.createElement('h5')
+        setAttributes(com, {"style":"display:inline-block;margin-left:25px;color:red;", "id":"update"})
+        com.textContent = "*"+data
+
+        completedDiv.appendChild(com)
     }
 
 }
@@ -92,4 +129,3 @@ clearUpdate = () =>{
 Element.prototype.remove = function() {
     this.parentElement.removeChild(this);
 }
-

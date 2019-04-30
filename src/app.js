@@ -6,7 +6,7 @@ const fs = require('fs');
 
 // Import Data
 const constants = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/constant.js");
-const {projects, addProjects} = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/mutable.js");
+const {projects, addProjects, showSummary, addToSummary} = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/mutable.js");
 
 
 // USING EXPRESS
@@ -57,6 +57,21 @@ app.get('/addProjects', (req, res)=>{
     addProjects(arr, dom)
     res.send({
         data: "*Completed"
+    })
+})
+
+app.get('/Summary', (req, res)=>{
+    var s = showSummary();
+    res.send({
+        summary: s
+    })
+})
+
+app.get('/addSummary', (req, res)=>{
+    var str = req.query.input
+    addToSummary(str)
+    res.send({
+        data: "*Added"
     })
 })
 
