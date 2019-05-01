@@ -6,7 +6,7 @@ const fs = require('fs');
 
 // Import Data
 const constants = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/constant.js");
-const {projects, addProjects, showSummary, addToSummary} = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/mutable.js");
+const {projects, addProjects, showSummary, addToSummary, addSummary} = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/mutable.js");
 
 
 // USING EXPRESS
@@ -36,13 +36,11 @@ app.get('', (req, res)=>{
 })
 
 app.get('/Resume1', (req, res)=>{
-    // console.log(__dirname+"/../Resume Templates/Resume1.html")
     res.render("Resume1")
 })
 
 app.get('/projects', (req, res)=>{
     var p = projects()
-    // console.log(p)
     res.send({
         projects: p
     })
@@ -53,7 +51,7 @@ app.get('/addProjects', (req, res)=>{
     arr = str.split(",").map(function(item) {
         return parseInt(item, 10);
     });
-    console.log(arr)
+    // console.log(arr)
     addProjects(arr, dom)
     res.send({
         data: "*Completed"
@@ -72,6 +70,17 @@ app.get('/addSummary', (req, res)=>{
     addToSummary(str)
     res.send({
         data: "*Added"
+    })
+})
+
+app.get('/addSummaryToResume', (req, res)=>{
+    var str = req.query.data
+    arr = str.split(",").map(function(item) {
+        return parseInt(item, 10);
+    });
+    addSummary(arr, dom)
+    res.send({
+        data: "*Completed"
     })
 })
 

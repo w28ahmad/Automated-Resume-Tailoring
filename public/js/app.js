@@ -26,24 +26,40 @@ submit.addEventListener('submit', (e)=>{
     }else if(command == "clear"){
         clear("Project_div");
     }else if(command.includes("add project")){
-        var iframe = document.getElementById('preview');
-        iframe.src = iframe.src;
         result = command.match(/\d+/g);
         addProjects(result);
-        // console.log(result);
+        refreshIframe();
     }else if(command == "show summary"){
         fetch('/Summary').then((result)=>{
             result.json().then((data)=>{
                 show(data.summary);
             })
         })
-    }else if(command == "add summary"){
+    }else if(command == "another summary"){
         addInput("summary")
+    }else if(command.includes("add summary")){
+        result = command.match(/\d+/g);
+        addSummaryToResume(result)
+        refreshIframe();
     }
     else{
         update("That is not a command, look at the commands bar for help")
     }
 })
+
+addSummaryToResume = (result) =>{
+    // console.log(result)
+    fetch('/addSummaryToResume?data='+result).then((response)=>{
+        response.json().then((data)=>{
+            update(data.data)
+        })
+    })
+}
+
+refreshIframe = () =>{
+    var iframe = document.getElementById('preview');
+    iframe.src = iframe.src;
+}
 
 addInput = (type) =>{
     // At the start of this function it should clear();

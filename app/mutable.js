@@ -51,9 +51,26 @@ addToSummary = (data) =>{
     fs.writeFileSync(__dirname+"/UserInfo/Information.json", JSON.stringify(obj))
 }
 
+addSummary = (summary, dom) =>{
+    var byId = dom.window.document;
+
+    var summaryList = obj.mutable.summary; 
+    var summaryText="";
+    for(var i = 0; i < summary.length; i++){
+            summaryText += "\n<span class='text'>"+summaryList[summary[i]]+"</span>";
+        }
+    byId.querySelector("#qualifications").textContent = summaryText;
+
+    var output = dom.window.document.documentElement.outerHTML;
+    output = output.replace(/&lt;/g, '<');
+    output = output.replace(/&gt;/g, '>');
+    fs.writeFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/templates/views/Resume1.hbs", output);
+}
+
 module.exports = {
     projects,
     addProjects, 
     showSummary,
-    addToSummary
+    addToSummary,
+    addSummary
 }
