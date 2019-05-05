@@ -41,6 +41,12 @@ submit.addEventListener('submit', (e)=>{
         result = command.match(/\d+/g);
         addSummaryToResume(result)
         refreshIframe();
+    }else if(command == "show work"){
+        fetch('/Work').then((result)=>{
+            result.json().then((data)=>{
+                show(data.workExperence);
+            })            
+        })
     }
     else{
         update("That is not a command, look at the commands bar for help")

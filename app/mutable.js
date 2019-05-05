@@ -67,10 +67,20 @@ addSummary = (summary, dom) =>{
     fs.writeFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/templates/views/Resume1.hbs", output);
 }
 
+WorkExperence = () =>{
+    var work = obj.mutable.work;
+    var list = []
+    for(var i = 0; i < work.length; i++){
+        list.push(work[i].title);
+    }
+    return list
+}
+
 module.exports = {
     projects,
     addProjects, 
     showSummary,
     addToSummary,
-    addSummary
+    addSummary,
+    WorkExperence
 }
