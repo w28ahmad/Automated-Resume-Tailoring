@@ -76,11 +76,38 @@ WorkExperence = () =>{
     return list
 }
 
+addWork = (works, dom) =>{
+    // console.log(works)
+    var code = "";
+    var byId = dom.window.document;
+    var workList = obj.mutable.work;
+
+    for(var i = 0; i < works.length; i++){
+        var points = "";
+        var title = workList[(works[i])].title;
+        var date = workList[(works[i])].date;
+        
+        for(var j = 0; j < workList[(works[i])].data.length; j++){
+            points+=(`<div class="text">
+            <span class="text">${workList[(works[i])].data[j]}</span>
+        </div>\n`);
+        }
+        code +=(`<div class='title-date'>\n<div class='title-section'>\n<div class='subtitle'>\n<span class='subtitle'>${title}</span>\n</div>\n</div>\n<div class='date'>\n<div class='cls_015'>\n<span class='cls_015'>${date}</span>\n</div>\n</div>\n</div>\n${points}\n`);
+    }
+    byId.querySelector("#Work").textContent = code;
+    var output = dom.window.document.documentElement.outerHTML;
+    output = output.replace(/&lt;/g, '<');
+    output = output.replace(/&gt;/g, '>');
+
+    fs.writeFileSync("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/templates/views/Resume1.hbs", output);
+}
+
 module.exports = {
     projects,
     addProjects, 
     showSummary,
     addToSummary,
     addSummary,
-    WorkExperence
+    WorkExperence,
+    addWork
 }

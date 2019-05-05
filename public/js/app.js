@@ -47,6 +47,10 @@ submit.addEventListener('submit', (e)=>{
                 show(data.workExperence);
             })            
         })
+    }else if(command.includes("add work")){
+        result = command.match(/\d+/g);
+        addWork(result);
+        refreshIframe();
     }
     else{
         update("That is not a command, look at the commands bar for help")
@@ -147,6 +151,15 @@ clearUpdate = () =>{
     }catch(err){
         
     }
+
+}
+
+addWork = (result)=>{
+    fetch('/addWork?data='+result).then((response)=>{
+        response.json().then((data)=>{
+            update(data.data)
+        })
+    })
 
 }
 
