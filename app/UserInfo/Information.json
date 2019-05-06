@@ -32,54 +32,55 @@
         "title": "Web-Design (HTML, CSS, Sass, cPanel, PHP)",
         "date": "Aug. 2018",
         "data": [
-          "Expanded my experience with programming through learning HTML, CSS, Sass and PHP from online courses",
-          "The purpose of my website is to display all my projects, acting as a digital resume. Link is in the header",
-          "Programmed a working contact me page for my website using PHP "
+          "• Expanded my experience with programming through learning HTML, CSS, Sass and PHP from online courses",
+          "• The purpose of my website is to display all my projects, acting as a digital resume. Link is in the header",
+          "• Programmed a working contact me page for my website using PHP "
         ]
       },
       {
         "title": "Snake Game (JavaScript) ",
         "date": "Dec 2018 – Jan 2019 ",
         "data": [
-          "Constructed a simple snake game using the p5js library ",
-          "Visualised Various sorting algorithms using the p5js library "
+          "• Constructed a simple snake game using the p5js library ",
+          "• Visualised Various sorting algorithms using the p5js library "
         ]
       },
       {
         "title": "Robotics (Arduino, AutoCAD Inventor)",
         "date": "Feb 2017 - June 2017, Feb 2018 - June 2018 ",
         "data": [
-          "Designed and programmed a competition level Vex robot with 8 teammates, placed 16th out of 64 teams for a regional competition",
-          "Programmed mechanical actuators, ultrasonic and line sensors for Tetrix-Max class competitions ",
-          " Used Inventor for 3D prototyping and printing a simple toy car"
+          "• Designed and programmed a competition level Vex robot with 8 teammates, placed 16th out of 64 teams for a regional competition",
+          "• Programmed mechanical actuators, ultrasonic and line sensors for Tetrix-Max class competitions ",
+          "•  Used Inventor for 3D prototyping and printing a simple toy car"
         ]
       },
       {
         "title": "Rube Goldberg Machine",
         "date": "Dec. 2017",
         "data": [
-          "Assembled a Rube Goldberg Machine for a physics class event, tasked to launch an egg",
-          "It was recognised by the science department as a skilled project",
-          "Filmed the project, it can be viewed here: https://www.youtube.com/watch?v=RDleIjJUa8M"
+          "• Assembled a Rube Goldberg Machine for a physics class event, tasked to launch an egg",
+          "• It was recognised by the science department as a skilled project",
+          "• Filmed the project, it can be viewed here: https://www.youtube.com/watch?v=RDleIjJUa8M"
         ]
       }
     ],
     "work": [
       {
-        "title": "Web-Design (HTML, CSS, Sass, cPanel, PHP)",
-        "date": "Aug. 2018",
+        "title": "Newspapers",
+        "date": "Sept 2013 - July 2018",
         "data": [
-          "Expanded my experience with programming through learning HTML, CSS, Sass and PHP from online courses",
-          "The purpose of my website is to display all my projects, acting as a digital resume. Link is in the header",
-          "Programmed a working contact me page for my website using PHP "
+          "• Organized and delivered newspapers for The Brampton Guardian 3 days a week, for a 60-house route"
         ]
       },
       {
-        "title": "Snake Game (JavaScript) ",
-        "date": "Dec 2018 – Jan 2019 ",
+        "title": "Entrepreneur in Training, Conrad School of Entrepreneurship and Business, University of Waterloo",
+        "date": "Jan 2019 – Apr 2019",
         "data": [
-          "Constructed a simple snake game using the p5js library ",
-          "Visualised Various sorting algorithms using the p5js library "
+          "• Specialized entrepreneurship co-op work program consisting of a 1-week intense entrepreneurship bootcamp followed by 3 micro-placements of 5 weeks each at early-stage start-ups",
+          "<b> GrowthGenius (Appscript, python)<b>",
+          "• Automated google sheets tasks by creating a sheets add-on that eliminated up to 2 hours of weekly work",
+          "• Created a program that sent tailored replies to specific mails",
+          "• Wrote a python scraper that determent the LinkedIn Url for prospects and added it into a excel sheet"
         ]
       }
 
