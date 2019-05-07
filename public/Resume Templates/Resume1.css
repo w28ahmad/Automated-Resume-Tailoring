@@ -1,7 +1,7 @@
 * {
     margin: 0;
     font-family: 'News Cycle', sans-serif;
-   font-family: 'Jaldi', sans-serif;
+   /* font-family: 'Jaldi', sans-serif; */
 }
 
 .first_page {
@@ -205,9 +205,10 @@ span.cls_020 {
 
 .test {
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
     text-align: center;
+    margin-left: 10px;
 }
 
 .infoBlock {
@@ -215,8 +216,7 @@ span.cls_020 {
 }
 
 .summary {
-    margin: 2% 5%;
-}
+    margin: 2% 0% 2% 5%;}
 
 .title-date {
 display:flow-root;
@@ -228,4 +228,8 @@ display:flow-root;
 
 .title-section {
     float: left;
+}
+
+.tab {
+    padding-left: 10px;
 }
