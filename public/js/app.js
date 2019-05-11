@@ -18,6 +18,7 @@ submit.addEventListener('submit', (e)=>{
     }else if(command == "show resume"){
         openResume();
     }else if(command == "show projects"){
+        clear("Project_div");
         fetch('/projects').then((result)=>{
             result.json().then((data)=>{
                 show(data.projects);
@@ -30,6 +31,7 @@ submit.addEventListener('submit', (e)=>{
         addProjects(result);
         refreshIframe();
     }else if(command == "show summary"){
+        clear("Project_div");
         fetch('/Summary').then((result)=>{
             result.json().then((data)=>{
                 show(data.summary);

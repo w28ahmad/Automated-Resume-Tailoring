@@ -11,13 +11,7 @@
     "technical_skills": {
       "languages": "<b>Languages:</b>  C++, HTML, CSS, JavaScript, Sass, node.js, Python, Appscript",
       "tools": "<b>IDE’s and tools:</b> cPanel, Brackets, Arduino, Eclipse, GitHub, MS Suite, AWS, AutoCAD Inventor"
-    },
-    "summary": [
-      "• Managed a weekly job and several extracurricular activities successfully while simultaneously placing at the top of my classes",
-      "• Experienced with C++ through university courses",
-      "• Enthusiastic about learning, testing and challenging my problem-solving skills",
-      "• Love designing functional and appealing webpages"
-    ]
+    }
   },
   "mutable": {
     "summary": [
@@ -62,6 +56,52 @@
           "• It was recognised by the science department as a skilled project",
           "• Filmed the project, it can be viewed here: https://www.youtube.com/watch?v=RDleIjJUa8M"
         ]
+      },{
+        "title": "ResumeTailor (Nodejs, Javascript)",
+        "date": "Feb - Apr 2019",
+        "data": [
+          "• A web app that allows a job applicants to tailor their resume with one simple command, allowing users to save hours while looking for a jobs",
+          "• Utilized node express to create web-server and serve up the appropriate assets",
+          "• Implemented jsDom in order to view resume edits in real time",
+          "• Executed an HTTPS API in Node.js with custom SSL to secure API endpoint"
+        ]
+      },{
+        "title": "Task Manager App (Javascript, Nodejs, Mongodb, Postman, Jest)",
+        "date": "Jan - Apr 2019",
+        "data":[
+          "• A web app that manages your personal tasks",
+          "• Implemented a RESTful API with nodejs",
+          "• Integrated JSON web tokens for authentication and security",
+          "• Added email notifications and file uploads to enhance the user experience",
+          "• Deployed the web app on Heroku. Here is the url:_________"
+        ]
+      },
+      {
+        "title": "Stock Analysis (Python)",
+        "date": "Apr 2019",
+        "data": [
+          "• Conducted exploratory data analysis of stock prices to better understand financial crisis of 2007–2008",
+          "• Retrieved bank-stock data using pandas data-reader form yahoo finance",
+          "• Utilized pandas and numpy to organize and clean the data",
+          "• Visualized data utilizing the dynamic features of plotly and cufflinks, here is a link to my research: ______"
+        ]
+      },
+      {
+      "title": "Machine Learning (Python - Scikit learn)",
+      "date": "Jan 2019 - Present",
+      "data": [
+        "• Implemented basic machine learning models to real life datasets",
+        "• ..."
+        ]
+      },
+      {
+        "title": "Decentralized Voter (Solidity, Truffle Framework)",
+        "date": "May 2019",
+        "data": [
+          "• Wrote a decentralized webapp on the Etherium network, allowing users to vote for specific candidates",
+          "• Wrote a smart contract to conduct an election",
+          "• Deployed the contract on a local Etherium Blockchain"
+          ]
       }
     ],
     "work": [

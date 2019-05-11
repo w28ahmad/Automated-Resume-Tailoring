@@ -23,9 +23,7 @@ show resume
 
 
 TODO
-create a way to update the json file, done for summary do for project
-Summary and technical_skills should be mutable
-summary should show in the preview
+add a brief discription section to mutable projects, each projects
 
 BUGS
 Show summary shows up multiple times if you enter it multiple times
