@@ -64,8 +64,8 @@ In that same information.json file, add your mutable informaion. (Ex: summary, p
 Save Information file 
 
 #### 3. Quick taloring
-Now go back to http://localhost:3000 and you should be able to tailor your resume using the following commands.
-```
+Now go back to http://localhost:3000 and you should be able to tailor your resume using the following commands:
+```bash
 show projects - Shows your current projects in the browser
 show summary - Shows you current summary point in the browser
 clear - clears any output shown in the browser
