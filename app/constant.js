@@ -19,12 +19,6 @@ fillConstantInfo = (dom) => {
     byId.querySelector("#languages").textContent = const_info.technical_skills.languages;
     byId.querySelector("#tools").textContent = const_info.technical_skills.tools;
 
-    //qualifications
-    var summaryText="";
-    for(var i = 0; i < const_info.summary.length; i++){
-        summaryText += "\n<span class='text'>"+const_info.summary[i]+"</span>";
-    }
-    byId.querySelector("#qualifications").textContent = summaryText;
 
     var output = dom.window.document.documentElement.outerHTML;
     output = output.replace(/&lt;/g, '<');

@@ -53,6 +53,13 @@ submit.addEventListener('submit', (e)=>{
         result = command.match(/\d+/g);
         addWork(result);
         refreshIframe();
+    }else if(command == "add constants"){
+        fetch('/addConstants').then((result)=>{
+            result.json().then((data)=>{
+                update(data.result);
+            })
+        })
+        refreshIframe();
     }
     else{
         update("That is not a command, look at the commands bar for help")

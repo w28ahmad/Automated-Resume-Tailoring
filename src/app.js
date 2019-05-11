@@ -5,7 +5,7 @@ const jsdom = require('jsdom');
 const fs = require('fs');
 
 // Import Data
-const constants = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/constant.js");
+const {fillConstantInfo} = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/constant.js");
 const {projects, addProjects, showSummary, addToSummary, addSummary, WorkExperence, addWork} = require("C:/Users/Wahab Ahmad/Documents/CV's/Automated Resume Taloring/app/mutable.js");
 
 
@@ -100,6 +100,13 @@ app.get('/addWork', (req, res)=>{
     addWork(arr, dom)
     res.send({
         data: "*Completed"
+    })
+})
+
+app.get('/addConstants', (req, res)=>{
+    fillConstantInfo(dom)
+    res.send({
+        result: "*Completed"
     })
 })
 

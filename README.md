@@ -65,10 +65,12 @@ Save Information file
 
 #### 3. Quick taloring
 Now go back to http://localhost:3000 and you should be able to tailor your resume using the following commands:
-```bash
+```
 show projects - Shows your current projects in the browser
 show summary - Shows you current summary point in the browser
 clear - clears any output shown in the browser
+
+add constants - Adds all the constants from the Information.json file
 
 add projects (numbers) - Adds those numbered projects to your resume in the specified order
     Ex: add projects 0 1 3 2 - adds project 0 1 3 2 to your projects section
